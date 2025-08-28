@@ -19,27 +19,27 @@
                 <form>
                     <div class="group-data two-columns">
                         <label for="#">Nombres y Apellidos:</label>
-                        <input id="nombresApellidos" type="text" placeholder="Escribe aquí">
+                        <input id="nombres" type="text" placeholder="Escribe aquí">
                     </div>
                     <div class="group-data two-columns">
                         <label for="#">Teléfono:</label>
-                        <input type="number" placeholder="Escribe aquí">
+                        <input id="telefono" type="number" placeholder="Escribe aquí">
                     </div>
                     <div class="group-data one-column">
                         <label for="#">Email:</label>
-                        <input type="email" placeholder="Escribe aquí">
+                        <input id="email" type="email" placeholder="Escribe aquí">
                     </div>
                     <div class="group-data two-columns">
                         <label for="#">Monto a Invertir:</label>
-                        <input type="number" placeholder="Escribe aquí">
+                        <input id="monto" type="number" placeholder="Escribe aquí">
                     </div>
                     <div class="group-data two-columns">
                         <label for="#">Tiempo de Inversión:</label>
-                        <select>
+                        <select id="tiempo">
                             <option>Elige una opción</option>
-                            <option value="">1 Año</option>
-                            <option value="">2 Años</option>
-                            <option value="">3 Años</option>
+                            <option value="1">1 Año</option>
+                            <option value="2">2 Años</option>
+                            <option value="3">3 Años</option>
                         </select>
                     </div>
 
@@ -53,17 +53,17 @@
                 </div>
                 <!-- La clase disabled debe ponerse en el contendor anterior para mostrar el resultado -->
                 <div class="post-simulation  disabled" id="post-simulation">
-                    <h3>Teniendo en cuenta que tu tiempo de inversión fue de <span>12 MESES</span> te pagaremos el <span>1.6%</span> de interés mensual.</h3>
+                    <h3>Teniendo en cuenta que tu tiempo de inversión fue de <span id="sTiempo">12 MESES</span> te pagaremos el <span id="sInteres">1.6%</span> de interés mensual.</h3>
 
                     <div class="total ">
                         <h4>Recibiras un total de:</h4>
-                        <h2>$ <span>000.000</span></h2>
-                        <p>Ganancia:$ <span> 000.000</span></p>
+                        <h2>$ <span id="sTotal">000.000</span></h2>
+                        <p>Ganancia:$ <span id="sGanancia"> 000.000</span></p>
                         
                     </div>
 
                     <div class="notificacion">
-                        <h5>Señor(a) <span>Nombres y apellidos</span> a tu correo electrónico <span>correo@gmail.com</span> hemos enviado las condiciones de nuestro servicio.</h5>
+                        <h5>Señor(a) <span id="sNombres">Nombres y apellidos</span> a tu correo electrónico <span id="sCorreo">correo@gmail.com</span> hemos enviado las condiciones de nuestro servicio.</h5>
                     </div>
                     
                 </div>
