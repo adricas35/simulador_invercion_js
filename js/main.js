@@ -4,10 +4,6 @@ function simulador() {
     const contPre = document.getElementById("pre-simulation");
     const contPost = document.getElementById("post-simulation");
 
-    contPost.classList.remove('disabled');
-    contPre.classList.add('disabled');
-
-
 //Variables que capturan los valores de los campos
     let cNombres = document.getElementById('nombres').value;
     let cTelefono = document.getElementById('telefono').value;
@@ -15,14 +11,6 @@ function simulador() {
     let cMonto = document.getElementById('monto').value;
     let cTiempo = document.getElementById('tiempo').value;
    
-
-// Validamos si los campos se han registrado
-if (cNombres.trim() === '' || cTelefono.trim() === '' || cEmail.trim() === '' || cMonto.trim() === '' || cTiempo === '0'){
-    alert('No se han ingresados los campos obligatorios.')
-    return;
-}
-
-
 //Constantes que capturan las etiquetas span en las que se muestran los valores por eso la s de show 
     const sTiempo = document.getElementById('sTiempo');
     const sInteres = document.getElementById('sInteres');
@@ -31,12 +19,20 @@ if (cNombres.trim() === '' || cTelefono.trim() === '' || cEmail.trim() === '' ||
     const sNombres = document.getElementById('sNombres');
     const sCorreo = document.getElementById('sCorreo');
 
-
-
 //Variables para realizar los calculos 
 let ganancia = 0;
 let total = 0;
 
+
+// Validamos si los campos se han registrado
+if (cNombres.trim() === '' || cEmail.trim() === '' || cMonto.trim() === '' || cTiempo === ''){
+    alert('No se han ingresados los campos obligatorios.')
+    return;
+}
+else{
+    contPost.classList.remove('disabled');
+    contPre.classList.add('disabled');
+    
 //Calcular el valor 
     switch (cTiempo) {
         //En este case realizaremos el calculo si el tiempo corresponde a un año
@@ -49,25 +45,27 @@ let total = 0;
         //En este case realizaremos el calculo si el tiempo corresponde a dos años  
         case '2': ganancia = (cMonto * 0.013)*24;
         total = parseInt (cMonto) + parseInt (ganancia);
+        sInteres.textContent = '1.3%';
+        sTiempo.textContent = '24 meses';
             break;
 
         //En este case realizaremos el calculo si el tiempo corresponde a tres años
         case '3': ganancia = (cMonto * 0.017)*36;
         total = parseInt (cMonto) + parseInt (ganancia);
+        sInteres.textContent = '1.7';
+        sTiempo.textContent = '36 meses';
             break; 
             
         
     }
-        sTotal.textContent= total;
-        sGanancia.textContent= ganancia;
-        sNombres.textContent= cNombres;
-        sCorreo.textContent= cEmail;
 
-    
-
-   
+    sTotal.textContent= total;
+    sGanancia.textContent= ganancia;
+    sNombres.textContent= cNombres;
+    sCorreo.textContent= cEmail;
 
 
+}
 
 }
 
