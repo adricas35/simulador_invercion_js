@@ -14,8 +14,13 @@ function simulador() {
     let cEmail = document.getElementById('email').value;
     let cMonto = document.getElementById('monto').value;
     let cTiempo = document.getElementById('tiempo').value;
+   
 
-
+// Validamos si los campos se han registrado
+if (cNombres.trim() === '' || cTelefono.trim() === '' || cEmail.trim() === '' || cMonto.trim() === '' || cTiempo === '0'){
+    alert('No se han ingresados los campos obligatorios.')
+    return;
+}
 
 
 //Constantes que capturan las etiquetas span en las que se muestran los valores por eso la s de show 
