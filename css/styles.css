@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 #simulator{
@@ -17,12 +18,13 @@
     border: 1px solid #dde0e8;
     margin: 100px auto;
     box-shadow: 0 0 3em #dfdfdf;
+    background-color: #e8ebef;
 }
 
 h1{
     font-size: 34px;
     font-weight: 700;
-    color: #2776F5;
+    color: #2b3d5a;
     text-align: center;
     padding-bottom: 50px;
     border-bottom: 2px solid #7a93ab;
@@ -40,7 +42,7 @@ h1{
 }
 
 h2{
-    color: #3527F5;
+    color: #6c66be;
     font-weight: 700;
     font-size: 28px;
     margin-bottom: 14px;
@@ -48,7 +50,7 @@ h2{
 
 .left p{
     margin-bottom: 30px;
-    color: #2776F5;
+    color: #4a5fa3;
 }
 
 form{
@@ -56,6 +58,7 @@ form{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 
 .group-data.two-columns{
     width: 50%;
@@ -92,7 +95,7 @@ form button{
     display: block;
     width: 97%;
     padding: 14px 80px;
-    background: #27BBF5;
+    background: #7787b0;
     color: #fff;
     border: 1px solid #1c9882;
     transition: .4s;
@@ -189,4 +192,27 @@ input::placeholder {
 
 .notificacion h5 span{
     font-weight: 700;
+}
+
+footer {
+  background-color: #4a5fa3; /* fondo oscuro elegante */
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer a {
+  color: #ffffff; /* texto blanco */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 16px;
+}
+
+footer a:hover {
+  color: #00bcd4; /* azul claro al pasar el mouse */
+  text-decoration: underline;
 }
